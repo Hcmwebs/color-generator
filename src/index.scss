@@ -1,0 +1,120 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	display: grid;
+	place-items: center;
+	min-height: 100vh;
+	background-color: #f7f7ff;
+}
+
+.container {
+	width: min(90vw, 1200px);
+	padding-block: 4rem;
+	background-color: #fff;
+	display: grid;
+	place-items: center;
+	gap: 4rem;
+}
+
+.header {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	gap: 2rem;
+
+	.title {
+		display: grid;
+		place-items: center;
+		gap: 0.2rem;
+
+		.underline {
+			width: 60%;
+			height: 2px;
+			background-color: #0e0e0e;
+		}
+	}
+}
+.main {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	gap: 3rem;
+
+	.form-group {
+		max-width: 350px;
+		.form {
+			width: min(100%, 300px);
+
+			input {
+				font-size: 0.9rem;
+				padding: 0.75rem;
+        border: 1px solid rgb(15, 80, 63);
+				border-right: 0;
+				border-top-left-radius: 0.2rem;
+				border-bottom-left-radius: 0.2rem;
+				outline: none;
+
+				&.error {
+					border-color: red;
+				}
+			}
+			.btn {
+				font-size: 0.9rem;
+				display: inline-block;
+				padding: 0.75rem 1.5rem;
+				outline: none;
+				border: 1px solid rgb(15, 80, 63);
+				border-left: 0;
+				border-top-right-radius: 0.2rem;
+				border-bottom-right-radius: 0.2rem;
+				color: #fff;
+				background-color: rgb(15, 80, 63);
+
+				transition: all 0.3s ease-in-out;
+				cursor: pointer;
+				&:hover {
+					transform: scale(0.98);
+					box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+				}
+			}
+		}
+	}
+
+	.colors {
+		width: 100%;
+		padding: 2rem;
+		display: grid;
+		place-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+		gap: 1rem;
+	}
+}
+
+.color {
+	width: 100%;
+	height: 100px;
+	padding: 1.5rem;
+	border-radius: 0.2rem;
+	text-align: center;
+	box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+
+	&.color-light {
+		color: #fff;
+	}
+
+	&:hover {
+		transform: scale(0.98);
+		box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.3);
+	}
+}
