@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import SingleColor from './Components/SingleColor/SingleColor'
 import './index.scss'
 import Values from 'values.js'
+import Title from './Components/Title/Title'
+import Form from './Components/Form/Form'
 
 const App = () => {
 	const [color, setColor] = useState('')
@@ -25,25 +27,14 @@ const App = () => {
 	return (
 		<>
 			<div className='container'>
-				<header className='header'>
-					<div className='title'>
-						<h1>Color Generator</h1>
-						<div className='underline'></div>
-					</div>
-				</header>
+				<Title />
 				<main className='main'>
-					<article className='form-group'>
-						<form className='form' onSubmit={handleSubmit}>
-							<input
-								type='text'
-								placeholder='#c7c7c7'
-								value={color}
-								onChange={handleChange}
-								className={`${error ? 'error' : null}`}
-							/>
-							<button className='btn'>Generate</button>
-						</form>
-					</article>
+					<Form
+						handleSubmit={handleSubmit}
+						handleChange={handleChange}
+						color={color}
+						error={error}
+					/>
 					<article className='colors'>
 						{list.map((color, index) => {
 							return (

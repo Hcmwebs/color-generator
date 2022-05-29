@@ -1,0 +1,18 @@
+.header {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	gap: 2rem;
+
+	.title {
+		display: grid;
+		place-items: center;
+		gap: 0.2rem;
+
+		.underline {
+			width: 60%;
+			height: 2px;
+			background-color: #0e0e0e;
+		}
+	}
+}
