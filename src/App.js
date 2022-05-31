@@ -8,7 +8,7 @@ import Form from './Components/Form/Form'
 const App = () => {
 	const [color, setColor] = useState('')
 	const [error, setError] = useState(false)
-	const [list, setList] = useState(new Values('#c7c7c7').all(10))
+	const [list, setList] = useState(new Values('#3acabb').all(10))
 
 	const handleChange = (e) => {
 		setColor(e.target.value)
