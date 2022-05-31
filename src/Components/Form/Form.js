@@ -8,7 +8,7 @@ const Form = ({color,error,handleChange,handleSubmit}) => {
 				<form className='form' onSubmit={handleSubmit}>
 					<input
 						type='text'
-						placeholder='#c7c7c7'
+						placeholder='#3acabb'
 						value={color}
 						onChange={handleChange}
 						className={`${error ? 'error' : null}`}
